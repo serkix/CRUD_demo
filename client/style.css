@@ -1,0 +1,177 @@
+a {
+	text-decoration: none;
+}
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: initial;
+	font-size: 1em;
+  padding: 10px;
+
+  border: 0px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  background-color: #FFECB3;
+  text-decoration: none;
+}
+a.button:hover {
+  background: #FFD54F;
+}
+button {
+	font-size: 1em;
+  padding: 10px;
+
+  border: 0px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  background-color: #FFECB3;
+  text-decoration: none;
+  
+}
+button:hover {
+  background: #FFD54F;
+  
+}
+button:focus {
+	outline: none; 
+}
+
+.data-container {
+	margin: 10px;
+	border-collapse: collapse;
+	background-color: #FFF8E1;
+}
+thead .record-container {
+	background-color: #FFC107!important;
+	height: 60px;
+}
+.record-container {
+	transition: all 0.3s ease-out;
+}
+.record-container:hover {
+	
+	background-color: #FFE082!important;
+}
+.record-container:nth-child(even) {
+	background-color: #FFF8E1;
+}
+.record-container:nth-child(odd) {
+	background-color: #FFECB3;
+}
+
+.record-field {
+	padding: 5px;
+	min-width: 50px;
+	word-break: break-all;
+	
+}
+
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background-color: #FFF8E1;	
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 300px) and (max-device-width: 900px)  {
+	body {
+		font-size: large;
+	}
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tfoot tr td{
+		border: none;
+	}
+	
+	tbody tr { border: 1px solid #ccc; }
+	
+	tbody td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+
+	}
+	
+	td:before {
+	  content: attr(data-label);
+	  display: inline-block;
+	  line-height: 1.5;
+	  
+	  width: 100%;
+	  white-space: nowrap;
+	  
+	}
+	
+	.popup {
+		width: 70%;
+		font-size: xx-large;
+	}
+	
+	input {
+		font-size: xx-large;
+	}
+	a {
+		font-size: xxx-large!important;
+	}
+	
+}
